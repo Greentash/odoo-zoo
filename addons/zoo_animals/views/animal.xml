@@ -6,5 +6,39 @@
             <field name="res_model">zoo.animal</field>
             <field name="view_mode">tree,form</field>
         </record>
+
+<!-- view form zoo animal -->
+        <record model="ir.ui.view" id="view_form_zooanimal">
+           <field name="name">Zoo Animal</field>
+           <field name="model">zoo.animal</field>
+           <field name="view_type">form</field>
+           <field name="arch" type="xml">
+            <form string="Zoo Animal">
+              <sheet>
+                <h1><label for="name"/></h1>
+                <field name="name"/>
+                <group>
+                  <field name="gender"/>
+                  <field name="branch"/>
+                </group>
+              </sheet>
+            </form>
+           </field>
+         </record>
+ <!-- view tree zoo animal -->
+         <record model="ir.ui.view" id="view_form_zooanimal">
+          <field name="name">Zoo Animal</field>
+          <field name="model">zoo.animal</field>
+          <field name="view_type">tree</field>
+          <field name="arch" type="xml">
+             <tree string="A list of zoo animals">
+               <field name="name"/>
+               <field name="gender"/>
+               <field name="branch"/>
+             </tree>
+          </field>
+         </record>
+
+
     </data>
 </openerp>
